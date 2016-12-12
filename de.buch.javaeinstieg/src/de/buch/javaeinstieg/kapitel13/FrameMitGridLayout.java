@@ -19,7 +19,7 @@ public class FrameMitGridLayout extends JFrame
 		
 		for (int i = 0; i < 6; i++)
 		{
-			int rgbFg = 255 - i * 50;
+			int rgbFg = 255 - i * 60;
 			int rgbBg = i*50;
 			
 			fl[i] = new FarbigesLabel("Nummer " + (i+1), new Color(rgbFg, rgbFg, rgbFg), new Color(rgbBg, rgbBg, rgbBg));
