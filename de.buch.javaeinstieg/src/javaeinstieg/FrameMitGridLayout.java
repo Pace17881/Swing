@@ -1,4 +1,4 @@
-package de.buch.javaeinstieg.kapitel13;
+package javaeinstieg;
 
 import java.awt.Color;
 import java.awt.Container;

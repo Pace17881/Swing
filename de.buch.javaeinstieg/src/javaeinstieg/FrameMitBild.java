@@ -1,4 +1,4 @@
-package de.buch.javaeinstieg.kapitel13;
+package javaeinstieg;
 
 import java.awt.*;
 
@@ -14,8 +14,9 @@ public class FrameMitBild extends JFrame
 		c = getContentPane();
 		c.setLayout(new FlowLayout());
 		
-		Icon bild = new ImageIcon("testbild.png");
-		lab = new JLabel("Testbild", bild, JLabel.CENTER);
+		java.net.URL url = getClass().getResource("/resources/testbild.png");
+		Icon bild = new ImageIcon(url);
+		lab = new JLabel("Testbild-PNG: ", bild, JLabel.CENTER);
 		lab.setHorizontalTextPosition(JLabel.CENTER);
 		lab.setVerticalTextPosition(JLabel.BOTTOM);
 		
