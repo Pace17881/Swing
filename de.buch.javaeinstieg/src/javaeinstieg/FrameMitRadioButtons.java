@@ -23,7 +23,6 @@ public class FrameMitRadioButtons extends JFrame
 			bg.add(rb[i]);
 			c.add(rb[i]);
 		}
-
 	}
 
 	public static void main(String[] args)
