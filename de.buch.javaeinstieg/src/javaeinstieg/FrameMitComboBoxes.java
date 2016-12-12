@@ -4,30 +4,36 @@ import java.awt.*;
 
 import javax.swing.*;
 
+@SuppressWarnings({ "unchecked", "rawtypes" })
 public class FrameMitComboBoxes extends JFrame
 {
 	Container c;
-	JLabel lab;
+	JComboBox vornamen, nachnamen;
 	
 	public FrameMitComboBoxes()
 	{
 		c = getContentPane();
 		c.setLayout(new FlowLayout());
 		
-		java.net.URL url = getClass().getResource("/resources/testbild.png");
-		Icon bild = new ImageIcon(url);
-		lab = new JLabel("Testbild-PNG: ", bild, JLabel.CENTER);
-		lab.setHorizontalTextPosition(JLabel.CENTER);
-		lab.setVerticalTextPosition(JLabel.BOTTOM);
+		String [] namen = new String[] { "Bilbo", "Frodo", "Samwise", "Meriadoc", "Peregrin"};
+		vornamen = new JComboBox(namen);
 		
-		c.add(lab);
+		nachnamen = new JComboBox();
+		nachnamen.addItem("Baggins");
+		nachnamen.addItem("Gamgee");
+		nachnamen.addItem("Took");
+		
+		nachnamen.setSelectedIndex(1);
+		
+		c.add(vornamen);
+		c.add(nachnamen);
 	}
 
 	public static void main(String[] args)
 	{
 		FrameMitComboBoxes fenster = new FrameMitComboBoxes();
 		fenster.setTitle("Frame mit GridLayout");
-		fenster.setSize(300,150);
+		fenster.setSize(240,160);
 		fenster.setVisible(true);
 		fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
