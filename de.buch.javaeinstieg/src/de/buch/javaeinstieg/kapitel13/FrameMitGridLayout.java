@@ -15,7 +15,7 @@ public class FrameMitGridLayout extends JFrame
 	public FrameMitGridLayout()
 	{
 		c = getContentPane();
-		c.setLayout(new GridLayout(2, 3, 10, 41));
+		c.setLayout(new GridLayout(2, 3, 10, 40));
 		
 		for (int i = 0; i < 6; i++)
 		{
