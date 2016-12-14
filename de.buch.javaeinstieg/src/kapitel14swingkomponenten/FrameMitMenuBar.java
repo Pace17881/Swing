@@ -64,7 +64,7 @@ public class FrameMitMenuBar extends JFrame
 	public static void main(String[] args)
 	{
 		FrameMitMenuBar fenster = new FrameMitMenuBar();
-		fenster.setTitle("Frame mit Menüleiste und Toolbar");
+		fenster.setTitle("Frame mit Menueleiste und Toolbar");
 		fenster.setSize(350, 170);
 		fenster.setVisible(true);
 		fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

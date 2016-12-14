@@ -9,6 +9,7 @@ public class FrameMitScrollText extends JFrame
 	Container c;
 	JLabel info;
 	JTextArea ta;
+	JScrollPane sp;
 	
 	public FrameMitScrollText()
 	{
@@ -23,14 +24,16 @@ public class FrameMitScrollText extends JFrame
 		ta.setLineWrap(true);
 		ta.setWrapStyleWord(true);
 		
+		sp = new JScrollPane(ta);
+		
 		c.add(info, BorderLayout.NORTH);
-		c.add(ta);
+		c.add(sp);
 	}
 
 	public static void main(String[] args)
 	{
 		FrameMitScrollText fenster = new FrameMitScrollText();
-		fenster.setTitle("Frame mit TextArea");
+		fenster.setTitle("Frame mit ScrollTextArea");
 		fenster.setSize(200,160);
 		fenster.setVisible(true);
 		fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

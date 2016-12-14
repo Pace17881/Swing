@@ -1,12 +1,16 @@
 package kapitel14swingkomponenten;
 
 import java.awt.*;
+import java.util.Random;
+
 import javax.swing.*;
 
 public class VierButtonFrame2 extends JFrame
 {
 	Container c;
 	JLabel beschriftung;
+	JButton btn;
+	Color co;
 
 	public VierButtonFrame2(int i)
 	{
@@ -20,10 +24,38 @@ public class VierButtonFrame2 extends JFrame
 		else
 			c.setLayout(new GridLayout(0, 1));
 
-		c.add(new JButton("A"));
-		c.add(new JButton("B"));
-		c.add(new JButton("C"));
-		c.add(new JButton("D"));
+		Random r = new Random();
+		char ch = 'A';
+		btn = new JButton(String.format("%s",ch));
+		co = new Color(r.nextInt(255), r.nextInt(255), r.nextInt(255));
+		btn.setBackground(co);
+		btn.setToolTipText("R: " + co.getRed() + " B: " + co.getBlue() + " G: " + co.getGreen());
+		c.add(btn);
+		ch++;
+		
+		btn = new JButton(String.format("%s",ch));
+		co = new Color(r.nextInt(255), r.nextInt(255), r.nextInt(255));
+		btn.setBackground(co);
+		btn.setToolTipText("R: " + co.getRed() + " B: " + co.getBlue() + " G: " + co.getGreen());
+		c.add(btn);
+		ch++;
+		
+		btn = new JButton(String.format("%s",ch));
+		co = new Color(r.nextInt(255), r.nextInt(255), r.nextInt(255));
+		btn.setBackground(co);
+		btn.setToolTipText("R: " + co.getRed() + " B: " + co.getBlue() + " G: " + co.getGreen());
+		c.add(btn);
+		ch++;
+		
+		btn = new JButton(String.format("%s",ch));
+		co = new Color(r.nextInt(255), r.nextInt(255), r.nextInt(255));
+		btn.setBackground(co);
+		btn.setToolTipText("R: " + co.getRed() + " B: " + co.getBlue() + " G: " + co.getGreen());
+		c.add(btn);
+		ch++;
+		
+		
+		
 	}
 
 	public static void main(String[] args)

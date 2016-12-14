@@ -8,7 +8,8 @@ import javax.swing.*;
 public class FrameMitListe extends JFrame
 {
 	Container c;
-	JComboBox vornamen, nachnamen;
+	JList vornamen;
+	JComboBox nachnamen;
 	
 	public FrameMitListe()
 	{
@@ -16,7 +17,7 @@ public class FrameMitListe extends JFrame
 		c.setLayout(new FlowLayout());
 		
 		String [] namen = new String[] { "Bilbo", "Frodo", "Samwise", "Meriadoc", "Peregrin"};
-		vornamen = new JComboBox(namen);
+		vornamen = new JList(namen);
 		
 		nachnamen = new JComboBox();
 		nachnamen.addItem("Baggins");
@@ -32,7 +33,7 @@ public class FrameMitListe extends JFrame
 	public static void main(String[] args)
 	{
 		FrameMitListe fenster = new FrameMitListe();
-		fenster.setTitle("Frame mit GridLayout");
+		fenster.setTitle("Frame mit Liste");
 		fenster.setSize(240,160);
 		fenster.setVisible(true);
 		fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

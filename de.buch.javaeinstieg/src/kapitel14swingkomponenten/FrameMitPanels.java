@@ -7,34 +7,37 @@ import javax.swing.*;
 public class FrameMitPanels extends JFrame
 {
 	Container c;
-	JLabel info;
-	JTextArea ta;
-	JScrollPane sp;
+	JPanel jp1, jp2, jp3;
 	
 	public FrameMitPanels()
 	{
 		c = getContentPane();
 		
-		info = new JLabel("Hier kann Text bearbeitet werden");
-		ta = new JTextArea("Einiges an Text steht auch schon hier rum.");
+		jp1 = new JPanel();
+		jp2 = new JPanel();
+		jp3 = new JPanel(new GridLayout(2, 3));
 		
-		Font schrift = new Font("SansSerif", Font.BOLD+Font.ITALIC, 16);
-		ta.setFont(schrift);
+		for (int i = 1; i<=3; i++)
+			jp1.add(new JButton("Taste " + i));
 		
-		ta.setLineWrap(true);
-		ta.setWrapStyleWord(true);
+		Icon bild = new ImageIcon(getClass().getResource("/resources/testbild.png"));
 		
-		sp = new JScrollPane(ta);
+		for (int i = 1; i <= 3; i++)
+			jp2.add(new JLabel(bild));
 		
-		c.add(info, BorderLayout.NORTH);
-		c.add(sp);
+		for (int i = 1; i <= 6; i++)
+			jp3.add(new JCheckBox("Auswahlbox " + i));
+		
+		c.add(jp1, BorderLayout.NORTH);
+		c.add(jp2, BorderLayout.CENTER);
+		c.add(jp3, BorderLayout.SOUTH);
 	}
 
 	public static void main(String[] args)
 	{
 		FrameMitPanels fenster = new FrameMitPanels();
-		fenster.setTitle("Frame mit ScrollTextArea");
-		fenster.setSize(200,160);
+		fenster.setTitle("Frame mit Panels");
+		fenster.setSize(350,200);
 		fenster.setVisible(true);
 		fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

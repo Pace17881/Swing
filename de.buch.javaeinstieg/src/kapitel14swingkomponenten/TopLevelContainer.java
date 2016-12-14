@@ -22,6 +22,7 @@ public class TopLevelContainer
 		w.setVisible(true);
 		
 		JDialog d = new JDialog(f, true);
+
 		d.getContentPane().add(new JLabel("Dialog", JLabel.CENTER));
 		d.setTitle("Dialog");
 		d.setSize(150, 100);
