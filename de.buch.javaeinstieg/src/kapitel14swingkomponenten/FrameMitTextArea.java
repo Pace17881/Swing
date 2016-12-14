@@ -1,10 +1,9 @@
-package javaeinstieg;
+package kapitel14swingkomponenten;
 
 import java.awt.*;
 
 import javax.swing.*;
 
-@SuppressWarnings({ "unchecked", "rawtypes" })
 public class FrameMitTextArea extends JFrame
 {
 	Container c;

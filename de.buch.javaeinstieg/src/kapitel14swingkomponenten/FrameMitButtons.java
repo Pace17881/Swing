@@ -1,4 +1,4 @@
-package javaeinstieg;
+package kapitel14swingkomponenten;
 
 import java.awt.*;
 

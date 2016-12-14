@@ -1,6 +1,6 @@
 //Aufgabe 13.2
 
-package javaeinstieg;
+package kapitel14swingkomponenten;
 
 import javax.swing.JFrame;
 
